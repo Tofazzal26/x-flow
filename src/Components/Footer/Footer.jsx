@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-2">
           <div className="col-span-1">
-            <div className="flex lg:justify-between lg:flex-row">
+            <div className="flex lg:justify-between gap-4 lg:gap-0 lg:flex-row">
               <div>
                 <h2 className="text-white text-[20px] lg:text-[26px]">
                   Contact

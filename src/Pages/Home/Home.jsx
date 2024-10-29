@@ -3,6 +3,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Banner from "../../Components/Banner/Banner";
 import Brand from "../../Components/Brand/Brand";
 import OurAnalytics from "../../Components/OurAnalytics/OurAnalytics";
+import OurPosts from "../../Components/OurPosts/OurPosts";
 
 const Home = () => {
   const { name } = useContext(AuthContext);
@@ -11,6 +12,7 @@ const Home = () => {
     <div>
       <Banner />
       <Brand />
+      <OurPosts />
       <OurAnalytics />
     </div>
   );

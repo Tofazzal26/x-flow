@@ -2,7 +2,7 @@ import React from "react";
 
 const OurAnalytics = () => {
   return (
-    <div className="bg-[#0b0121] lg:py-10">
+    <div className="bg-[#0b0121] lg:py-10 py-4">
       <div className="shadow-Card container mx-auto rounded-[20px]">
         <div className="lg:py-[70px]">
           <div className="lg:leading-[60px]">
