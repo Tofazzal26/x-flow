@@ -43,7 +43,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-[25px]">X-Flow</a>
+          <a className="btn btn-ghost text-[20px] lg:text-[25px]">X-Flow</a>
         </div>
 
         <div className="navbar-end">
@@ -56,11 +56,11 @@ const Navbar = () => {
               Download the app
             </button>
 
-            <button className="border-[1px] px-4 py-2 rounded-full">
+            <button className="border-[1px] px-6 py-2 rounded-full">
               Talk to an expert
             </button>
           </ul>
-          <button className="md:hidden flex border-[1px] px-4 py-2 bg-white text-black rounded-full">
+          <button className="md:hidden flex border-[1px] lg:px-6 px-4 py-1 lg:py-2 bg-white text-black rounded-full">
             Download
           </button>
         </div>
