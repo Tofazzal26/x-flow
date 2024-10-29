@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         Rajdhani: ["Rajdhani", "serif"],
       },
+      boxShadow: {
+        Card: "0 0 30px rgba(255, 255, 255, 0.2)",
+      },
     },
   },
   plugins: [require("daisyui")],
