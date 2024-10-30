@@ -3,10 +3,22 @@ import axios from "axios";
 import { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import "./OurPostStyle.css";
+import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 
 const OurPosts = () => {
   const [moreData, setMoreData] = useState(9);
+  let [isOpen, setIsOpen] = useState(false);
+  const [singlePost, setSinglePost] = useState([]);
 
+  function open(post) {
+    setIsOpen(true);
+    setSinglePost(post);
+  }
+
+  function close() {
+    setIsOpen(false);
+  }
+  console.log(singlePost);
   const {
     isLoading,
     data: allPost = [],
@@ -58,15 +70,18 @@ const OurPosts = () => {
                     </div>
                   </div>
                   <h2 className="text-[25px] lg:text-[45px] text-gray-200">
-                    {item?.title}
+                    {item?.title?.slice(0, 60)}
                   </h2>
                   <p className="text-[16px] lg:text-[20px] text-gray-300">
-                    {item?.body}
+                    {item?.body?.slice(0, 200)}
                   </p>
                   <div className="my-4">
-                    <button className="border-b-[1px] border-gray-300 text-[15px] lg:text-[22px] text-gray-200">
+                    <Button
+                      onClick={() => open(item)}
+                      className="border-b-[1px] border-gray-300 text-[15px] lg:text-[22px] text-gray-200"
+                    >
                       Read more
-                    </button>
+                    </Button>
                   </div>
                 </div>
               ))}
@@ -78,6 +93,43 @@ const OurPosts = () => {
               >
                 Load More
               </button>
+            </div>
+            <div>
+              <Dialog
+                open={isOpen}
+                as="div"
+                className="relative z-10 focus:outline-none"
+                onClose={close}
+              >
+                <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                  <div className="flex min-h-full items-center justify-center p-4">
+                    <DialogPanel
+                      transition
+                      className="w-full max-w-3xl rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+                    >
+                      <div>
+                        <p className="text-gray-200 text-lg">
+                          Post Id: {singlePost?.id}
+                        </p>
+                        <h2 className="text-[25px] lg:text-[45px] text-gray-200">
+                          {singlePost?.title?.slice(0, 40)}
+                        </h2>
+                        <p className="text-[16px] lg:text-[20px] text-gray-300">
+                          {singlePost?.body}
+                        </p>
+                      </div>
+                      <div className="mt-4 text-right">
+                        <Button
+                          className="inline-flex text-[18px] items-center gap-2 rounded-md bg-gray-700 py-1.5 px-4  font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[focus]:outline-1 data-[focus]:outline-white data-[open]:bg-gray-700"
+                          onClick={close}
+                        >
+                          Close
+                        </Button>
+                      </div>
+                    </DialogPanel>
+                  </div>
+                </div>
+              </Dialog>
             </div>
           </div>
         </div>
