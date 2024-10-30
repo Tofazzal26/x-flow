@@ -45,29 +45,33 @@ const OurPosts = () => {
               {allPost.slice(0, moreData).map((item, index) => (
                 <div
                   key={index}
-                  className="break-inside-avoid mb-4 p-20 card space-y-6  text-white  rounded-[16px] shadow-Card"
+                  className="break-inside-avoid mb-4 p-10 lg:p-20 card space-y-6  text-white  rounded-[16px] shadow-Card"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="bg-gradient-to-r w-[60px] h-[60px] flex justify-center items-center rounded-full from-[#eb27f8] to-[#4e03c3]">
-                      <FaUser size={30} className="" />
+                    <div className="bg-gradient-to-r lg:w-[60px] w-[50px] h-[50px] lg:h-[60px] flex justify-center items-center rounded-full from-[#eb27f8] to-[#4e03c3]">
+                      <FaUser size={30} />
                     </div>
                     <div>
-                      <h2 className="font-semibold text-[20px] text-gray-300">
+                      <h2 className="font-semibold text-[16px] lg:text-[20px] text-gray-300">
                         {users[index] ? users[index].name : "Loading..."}
                       </h2>
                     </div>
                   </div>
-                  <h2 className="text-[45px] text-gray-200">{item?.title}</h2>
-                  <p className="text-[20px] text-gray-300">{item?.body}</p>
+                  <h2 className="text-[25px] lg:text-[45px] text-gray-200">
+                    {item?.title}
+                  </h2>
+                  <p className="text-[16px] lg:text-[20px] text-gray-300">
+                    {item?.body}
+                  </p>
                   <div className="my-4">
-                    <button className="border-b-[1px] border-gray-300 text-[22px] text-gray-200">
+                    <button className="border-b-[1px] border-gray-300 text-[15px] lg:text-[22px] text-gray-200">
                       Read more
                     </button>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="text-center my-4">
+            <div className="text-center lg:my-4">
               <button
                 onClick={() => setMoreData(moreData + 9)}
                 className="border-2 border-gray-400 font-semibold px-6 py-2 text-[18px] rounded-full text-gray-400"
