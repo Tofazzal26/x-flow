@@ -22,11 +22,11 @@ const Banner = () => {
               Suspendisse varius enim in eros elementum tristique.
             </p>
           </div>
-          <div className="flex lg:flex-row flex-col items-center gap-4 mt-6">
-            <button className="bg-[#ececec] lg:px-6 px-4 py-1 lg:py-3 rounded-full text-gray-700 font-semibold">
+          <div className="flex flex-row  items-center gap-2 lg:gap-4 lg:mt-6 mt-4">
+            <button className="bg-[#ececec] lg:px-6 text-sm lg:text-base px-[10px] py-2 lg:py-3 rounded-full text-gray-700 font-semibold">
               Download the app{" "}
             </button>
-            <button className="border-2 border-gray-500 py-1 px-4 lg:px-6 text-gray-400 lg:py-3 rounded-full  font-semibold">
+            <button className="border-2 border-gray-500 py-[6px] text-sm lg:text-base px-4 lg:px-6 text-gray-400 lg:py-3 rounded-full  font-semibold">
               Talk to an expert
             </button>
           </div>

@@ -4,18 +4,18 @@ const Brand = () => {
   return (
     <div className="bg-[#0b0121]">
       <div>
-        <h2 className="text-[#ceccd3] text-center text-base lg:text-[22px]">
+        <h2 className="text-[#ceccd3] text-center text-base px-2 lg:px-0 lg:text-[22px]">
           Trusted by teams at over <span className="text-white">1,000</span> of
           the world's leading organizations
         </h2>
         <div className="flex lg:flex-row flex-wrap justify-center items-center space-x-6 lg:space-x-20 mt-4">
-          <img src="/dell.png" alt="" className="w-[70px]" />
-          <img src="/zen.png" alt="" className="w-[70px]" />
-          <img src="/rakuten.png" alt="" className="w-[70px]" />
-          <img src="/pacific.png" alt="" className="w-[70px]" />
-          <img src="/ncr.png" alt="" className="w-[70px]" />
-          <img src="/Lattic.png" alt="" className="w-[70px]" />
-          <img src="/ted.png" alt="" className="w-[70px]" />
+          <img src="/dell.png" alt="" className="w-[50px] lg:w-[70px]" />
+          <img src="/zen.png" alt="" className="w-[50px] lg:w-[70px]" />
+          <img src="/rakuten.png" alt="" className="w-[50px] lg:w-[70px]" />
+          <img src="/pacific.png" alt="" className="w-[50px] lg:w-[70px]" />
+          <img src="/ncr.png" alt="" className="w-[50px] lg:w-[70px]" />
+          <img src="/Lattic.png" alt="" className="w-[50px] lg:w-[70px]" />
+          <img src="/ted.png" alt="" className="w-[50px] lg:w-[70px]" />
         </div>
         <div>
           <div class="lg:relative flex flex-col items-center text-center py-4 lg:py-[60px]">
