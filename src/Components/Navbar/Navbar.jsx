@@ -43,20 +43,20 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-[20px] lg:text-[25px]">X-Flow</a>
+          <a className="btn btn-ghost text-[20px] lg:text-[30px]">X-Flow</a>
         </div>
 
         <div className="navbar-end">
-          <ul className="menu menu-horizontal px-1 hidden  md:flex items-center text-[16px] gap-6 text-[#ececec]">
+          <ul className="menu menu-horizontal px-1 hidden  md:flex items-center text-[18px] gap-6 text-[#ececec]">
             <li>Features</li>
             <li>Pricing</li>
             <li>About us</li>
 
-            <button className="border-[1px] px-4 py-2 bg-white text-black rounded-full">
+            <button className="border-[1px] px-4 py-[10px] bg-white text-black rounded-full">
               Download the app
             </button>
 
-            <button className="border-[1px] px-6 py-2 rounded-full">
+            <button className="border-[1px] px-6 py-[10px] rounded-full">
               Talk to an expert
             </button>
           </ul>
