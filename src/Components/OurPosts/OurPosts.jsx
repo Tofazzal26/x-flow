@@ -53,6 +53,13 @@ const OurPosts = () => {
       <div>
         <div className="bg-[#0b0121] lg:py-10">
           <div className="container mx-auto">
+            {isLoading ? (
+              <div className="flex justify-center items-center lg:my-4">
+                <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
+              </div>
+            ) : (
+              ""
+            )}
             <div className="columns-1 sm:col-span-2 lg:columns-3 gap-6 p-4">
               {allPost.slice(0, moreData).map((item, index) => (
                 <div
@@ -73,7 +80,7 @@ const OurPosts = () => {
                     {item?.title?.slice(0, 60)}
                   </h2>
                   <p className="text-[16px] lg:text-[20px] text-gray-300">
-                    {item?.body?.slice(0, 200)}
+                    {item?.body?.slice(0, 100)}
                   </p>
                   <div className="my-4">
                     <Button
@@ -112,7 +119,7 @@ const OurPosts = () => {
                           Post Id: {singlePost?.id}
                         </p>
                         <h2 className="text-[25px] lg:text-[45px] text-gray-200">
-                          {singlePost?.title?.slice(0, 40)}
+                          {singlePost?.title}
                         </h2>
                         <p className="text-[16px] lg:text-[20px] text-gray-300">
                           {singlePost?.body}
