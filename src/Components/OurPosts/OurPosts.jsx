@@ -18,7 +18,7 @@ const OurPosts = () => {
   function close() {
     setIsOpen(false);
   }
-  console.log(singlePost);
+  // console.log(singlePost);
   const {
     isLoading,
     data: allPost = [],

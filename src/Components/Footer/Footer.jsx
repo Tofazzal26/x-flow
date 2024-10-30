@@ -49,7 +49,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="lg:ml-[240px] mr-[90px]">
+                <div className="xl:ml-[240px] mr-[90px]">
                   <h1 className="text-white text-[20px] lg:text-[26px]">
                     Social
                   </h1>
